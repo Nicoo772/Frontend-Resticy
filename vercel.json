@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      {
+        "source": "/neworder/:restaurantID/:tableID",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
