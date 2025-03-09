@@ -1,0 +1,144 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --dark-color: #333333;
+  --wine-color: #51161f;
+  --yellow-color: #d4af37;
+  --yellow-secondary: #ebc341;
+  --marfil-color: #fffff0;
+}
+body {
+  background-color: var(--wine-color);
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+svg {
+  border: none;
+}
+/* add the code bellow */
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Eliminar controles en navegadores Webkit (Chrome, Safari, Edge) */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Eliminar controles en Firefox */
+  input[type="number"] {
+    appearance: textfield;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #3e3e3e22;
+  }
+  50% {
+    background-color: var(--yellow-secondary);
+  }
+  100% {
+    background-color: #3e3e3e22;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.blinking {
+  animation: blink 2s infinite;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.banner1 {
+  background-image: url("./assets/Banner1.png");
+  background-repeat: no-repeat;
+}
+.banner2 {
+  background-image: url("./assets/Banner2.png");
+  background-repeat: no-repeat;
+}
+
+.custom-toast-container {
+  margin-top: 70px;
+}
+
+input[type="radio"] {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #ddd;
+  cursor: pointer;
+  appearance: none;
+}
+input[type="radio"]:checked {
+  background-color: var(--yellow-color);
+}
+.swiper-pagination {
+  padding-top: 15px;
+  position: relative;
+}
+.swiper-pagination-bullet {
+  background-color: var(--wine-color);
+}
+@media (max-width: 1200px) {
+  .banner1 {
+    background-image: url("./assets/Banner1-responsive.png");
+  }
+}
+@media (max-width: 550px) {
+  .banner2 {
+    background-image: url("./assets/Banner2-responsive.png");
+  }
+}
+@media (min-width: 551px) and (max-width: 1400px) {
+  .banner2 {
+    background-image: url("./assets/banner2-responsive-2.png");
+    background-repeat: no-repeat;
+  }
+}
