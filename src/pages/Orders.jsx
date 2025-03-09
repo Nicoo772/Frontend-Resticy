@@ -17,10 +17,6 @@ export default function Orders() {
   const [showSide, setShowSide] = useState(false);
 
   useEffect(() => {
-    console.log("El estado actual es:", orders, tables);
-  }, [orders, tables]);
-
-  useEffect(() => {
     socket.on("order", (newOrder) => handleNewOrder(newOrder));
     socket.on("order-payment", (order) => handleNewPayment(order));
     socket.on("order-update", (order) => handleOrderUpdate(order));
