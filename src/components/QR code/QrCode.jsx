@@ -13,7 +13,7 @@ const QRCodeGenerator = ({ restaurantID, tableID, tableNumber }) => {
     const handleOpen = () => {
         setOpen(true);
         if (restaurantID && tableID) {
-            const url = `/neworder/${restaurantID}/${tableID}`;
+            const url = `https://frontend-resticy.vercel.app/neworder/${restaurantID}/${tableID}`;
             import("qrcode").then((QRCode) => {
                 QRCode.toCanvas(qrCanvasRef.current, url, {
                     width: 350,
