@@ -124,7 +124,7 @@ export default function LandingPage() {
         >
           <img
             src={iphoneMp}
-            className="w-full h-auto max-h-[400px] md:max-w-[300px] md:h-auto object-cover"
+            className="w-[200px] md:w-[300px] object-cover"
             alt="Iphone con mercado pago"
           />
           <div className="mt-10 md:px-10">
@@ -161,7 +161,7 @@ export default function LandingPage() {
           <img
             src={logoGris}
             alt="Logo de resticy"
-            className="h-fit md:w-[350px] h-fit object-cover px-10"
+            className="md:w-[350px] object-cover px-10 md:px-0"
           />
 
           <div className="w-full px-10">
