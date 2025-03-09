@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import QrCodeIcon from '@mui/icons-material/QrCode';
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const QRCodeGenerator = ({ restaurantID, tableID, tableNumber }) => {
     const qrCanvasRef = useRef(null);
@@ -12,7 +13,7 @@ const QRCodeGenerator = ({ restaurantID, tableID, tableNumber }) => {
     const handleOpen = () => {
         setOpen(true);
         if (restaurantID && tableID) {
-            const url = `http://localhost:5173/neworder/${restaurantID}/${tableID}`;
+            const url = `/neworder/${restaurantID}/${tableID}`;
             import("qrcode").then((QRCode) => {
                 QRCode.toCanvas(qrCanvasRef.current, url, {
                     width: 350,
@@ -123,9 +124,10 @@ const QRCodeGenerator = ({ restaurantID, tableID, tableNumber }) => {
             >
                 <Box className="pt-4 p-4 md:p-4 bg-white flex justify-center flex-col rounded-lg" data-aos="fade-up">
                     <p className="text-xl text-center">Escanea el QR para ir a la mesa.</p>
-                    <a target='_blank' href={`http://localhost:5173/neworder/${restaurantID}/${tableID}`}>
+                    <Link target='_blank' to={`/neworder/${restaurantID}/${tableID}`} className="text-blue-800">
                     <canvas ref={qrCanvasRef} />
-                    </a>
+                    </Link>
+                  
                     {qrReady && (
                         <Button variant="contained" color="primary" onClick={handlePrint} sx={{ mt: 2 }}>
                             Imprimir QR
