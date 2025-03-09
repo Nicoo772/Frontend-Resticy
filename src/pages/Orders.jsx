@@ -17,6 +17,10 @@ export default function Orders() {
   const [showSide, setShowSide] = useState(false);
 
   useEffect(() => {
+    console.log("El estado actual es:", orders, tables);
+  }, [orders, tables]);
+
+  useEffect(() => {
     socket.on("order", (newOrder) => handleNewOrder(newOrder));
     socket.on("order-payment", (order) => handleNewPayment(order));
     socket.on("order-update", (order) => handleOrderUpdate(order));
@@ -73,11 +77,12 @@ export default function Orders() {
 
     if (is_completed == true) {
       // si la orden se marco como completada la elimina
-      const newOrders = orders.filter((anOrder) => anOrder.id !== id);
-      setOrders(newOrders);
+      setOrders((prevOrders) => {
+        return prevOrders.filter((anOrder) => anOrder.id !== id);
+      });
 
       // verifica si hay mas Órdenes en la mesa
-      const ordersInTable = newOrders.filter(
+      const ordersInTable = orders.filter(
         (order) => order.table_id === table_id
       );
 
@@ -89,9 +94,6 @@ export default function Orders() {
         )
       );
 
-      console.log(tables);
-      //da paso a las nuevas ordenes si la mesa tiene mas de 1
-      //newOrders.forEach((order) => handleNewOrder(order));
       return;
     }
 
