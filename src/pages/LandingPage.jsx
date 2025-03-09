@@ -161,7 +161,7 @@ export default function LandingPage() {
           <img
             src={logoGris}
             alt="Logo de resticy"
-            className="md:w-[350px] h-fit object-cover px-10"
+            className="h-fit md:w-[350px] h-fit object-cover px-10"
           />
 
           <div className="w-full px-10">
