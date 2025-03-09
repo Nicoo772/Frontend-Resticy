@@ -124,7 +124,7 @@ export default function LandingPage() {
         >
           <img
             src={iphoneMp}
-            className="w-fit object-cover h-[400px] md:w-full md:max-w-[300px] md:w-[600px] md:h-fit"
+            className="w-full h-auto max-h-[400px] md:max-w-[300px] md:h-auto object-cover"
             alt="Iphone con mercado pago"
           />
           <div className="mt-10 md:px-10">
