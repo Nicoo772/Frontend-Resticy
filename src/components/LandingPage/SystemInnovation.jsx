@@ -40,7 +40,7 @@ const SystemInnovation = () => {
         </p>
 
         {/* Swiper para pantallas pequeñas */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Swiper
             slidesPerView={1}
             spaceBetween={16}
@@ -65,7 +65,7 @@ const SystemInnovation = () => {
         </div>
 
         {/* Diseño en tarjetas para pantallas grandes */}
-        <div className="hidden md:flex flex-row justify-center gap-6 max-w-[80vw] mx-auto">
+        <div className="hidden lg:flex flex-row justify-center gap-6 max-w-[80vw] mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
