@@ -63,7 +63,7 @@ const RegisterForm = () => {
 
         <p className="text-center flex flex-col lg:flex-row lg:gap-1">
           ¿Ya tienes una cuenta?{" "}
-          <Link to="/login" className="text-blue-800">
+          <Link to="/login" className="text-blue-800 font-bold">
             Iniciar sesión
           </Link>
         </p>
