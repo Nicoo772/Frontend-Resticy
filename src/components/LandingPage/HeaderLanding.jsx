@@ -12,7 +12,7 @@ const HeaderLanding = () => {
           onClick={() => setShowMenu(!showMenu)}
           className="fa-solid fa-bars text-3xl md:hidden text-[--yellow-color]"
         ></i>
-        <Link to="/">
+        <Link to="#home">
           <img
             className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] "
             src={logo}
