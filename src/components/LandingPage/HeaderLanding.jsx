@@ -12,11 +12,13 @@ const HeaderLanding = () => {
           onClick={() => setShowMenu(!showMenu)}
           className="fa-solid fa-bars text-3xl md:hidden text-[--yellow-color]"
         ></i>
-        <img
-          className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] "
-          src={logo}
-          alt="Logo Resticy"
-        />
+        <Link to="/">
+          <img
+            className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] "
+            src={logo}
+            alt="Logo Resticy"
+          />
+        </Link>
         <button className="bg-transparent md:hidden text-[--wine-color] font-bold rounded-sm px-2 py-1"></button>
         <nav
           className={`md:px-10 py-5 md:py-0 md:pt-0 w-full md:flex-1 md:block ${
