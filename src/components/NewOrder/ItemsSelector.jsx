@@ -90,11 +90,11 @@ export default function ItemsSelector({ setOrderData, orderData }) {
           className="flex p-4 border-b border-gray-200 flex-col md:flex-row justify-between"
         >
           <div className="flex items-center gap-5 w-[40%]">
-            <div className="w-[40%]">
+            <div>
               <img
                 src={`https://resticy-production.up.railway.app/uploads/${item.img}`}
                 alt={item.name}
-                className="object-cover aspect-square rounded-[200px]"
+                className="min-w-[100px] max-w-[100px] object-cover aspect-square rounded-[200px]"
               />
             </div>
             <div>
