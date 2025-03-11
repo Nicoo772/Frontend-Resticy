@@ -7,7 +7,7 @@ const HeaderLanding = () => {
 
   return (
     <>
-      <header className="bg-[--wine-color] z-20 text-white flex justify-between items-center md:py-2 px-8 lg:px-20 fixed flex w-full flex-wrap md:flex-nowrap">
+      <header className="bg-[--wine-color] z-20 text-white flex py-1 justify-between items-center md:py-2 px-8 lg:px-20 fixed flex w-full flex-wrap md:flex-nowrap">
         <i
           onClick={() => setShowMenu(!showMenu)}
           className="fa-solid fa-bars text-3xl md:hidden text-[--yellow-color]"
@@ -23,7 +23,7 @@ const HeaderLanding = () => {
             !showMenu && "hidden"
           }`}
         >
-          <ul className="py-8 flex gap-3 flex-col md:flex-row md:py-0">
+          <ul className="py-2 flex gap-3 flex-col md:flex-row md:py-0">
             <li>
               <a href="#home">Funcionalidades</a>
             </li>
