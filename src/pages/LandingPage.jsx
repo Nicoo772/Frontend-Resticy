@@ -25,9 +25,9 @@ export default function LandingPage() {
           data-aos="fade-right"
         >
           <div>
-            <p className="text-white mb-2 font-light text-[1.0rem] md:text-[1.1rem]">
+            <h1 className="text-white mb-2 font-light text-[1.0rem] md:text-[1.1rem]">
               Software de gestión para restaurantes
-            </p>
+            </h1>
             <p className="text-3xl md:text-3xl xl:text-5xl font-[800] md:font-[900] mb-4 text-[--yellow-color]">
               Preocupate sólo por la comida
             </p>

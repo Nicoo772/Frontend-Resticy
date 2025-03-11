@@ -25,12 +25,12 @@ export default function Login() {
           </div>
           <div className="p-10 md:p-15 bg-white w-full md:w-[60%] rounded">
             <div className="mb-9">
-              <p className="text-xl lg:text-2xl">
+              <h1 className="text-xl lg:text-2xl">
                 Iniciar sesión o{" "}
                 <Link to="/register" className="text-blue-800">
                   Registrarse
                 </Link>
-              </p>
+              </h1>
             </div>
             <div className="h-[100%]">
               <LoginForm />
