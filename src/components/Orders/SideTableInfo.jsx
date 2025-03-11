@@ -50,7 +50,7 @@ export default function SideTableInfo({ selectedTable, orders, setModal }) {
 
   return (
     <div
-      className={`max-h-screen z-10 text-white bg-[var(--dark-color)] md:w-[30%] w-full absolute md:relative top-0 h-screen md:min-w-[400px] pt-5 ${
+      className={`max-h-screen z-10 text-white bg-[var(--dark-color)] md:w-[30%] w-full fixed md:relative top-0 h-screen md:min-w-[400px] pt-5 ${
         selectedTable ? "slide-in" : ""
       }`}
     >

@@ -45,9 +45,11 @@ export default function OrderItemsList({ displayOrder }) {
 
   return (
     <>
-      <div className="px-5 pb-5 h-full">
+      <div className="px-5 pb-5 h-full max-w-screen">
         {displayOrder?.notes && (
-          <i className="text-sm">Nota: {displayOrder.notes}</i>
+          <p className="text-sm break-words whitespace-normal">
+            Nota: {displayOrder.notes}
+          </p>
         )}
         <p className="text-xl w-full text-left pt-6">Orden:</p>
         <ul>
